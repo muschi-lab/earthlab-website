@@ -766,15 +766,29 @@ a { text-decoration: none; color: inherit; }
     max-width: 1100px;
     margin: 2rem auto 0;
     display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
     align-items: flex-start;
+    justify-content: center;
 }
 
 .who-illustration-left,
 .who-illustration-right {
     flex: 0 0 180px;
-    display: flex;
+    display: none;
     align-items: flex-end;
+}
+
+@media (min-width: 900px) {
+    .who-illustration-left,
+    .who-illustration-right {
+        display: flex;
+    }
+}
+
+.who-text {
+    flex: 1;
+    min-width: 280px;
 }
 
 .who-illustration-left img,
@@ -818,6 +832,7 @@ a { text-decoration: none; color: inherit; }
 
 .faq-layout {
     display: flex;
+    flex-wrap: wrap;
     gap: 3rem;
     align-items: flex-start;
     max-width: 1100px;
@@ -827,13 +842,20 @@ a { text-decoration: none; color: inherit; }
 
 .faq-list {
     flex: 1;
-    min-width: 0;
+    min-width: 280px;
 }
 
 .faq-illustration {
     flex: 0 0 456px;
     position: sticky;
     top: 6rem;
+    display: none;
+}
+
+@media (min-width: 1000px) {
+    .faq-illustration {
+        display: block;
+    }
 }
 
 .faq-figure {
@@ -1457,8 +1479,9 @@ a { text-decoration: none; color: inherit; }
 /* About Key Facts Strip */
 .about-key-facts {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 3rem;
+    gap: 1.5rem 3rem;
     margin: 2.5rem 0;
     padding: 1.5rem 0;
     border-top: 1px solid rgba(0, 0, 0, 0.06);
