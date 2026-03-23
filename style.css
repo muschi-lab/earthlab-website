@@ -1242,11 +1242,92 @@ a { text-decoration: none; color: inherit; }
         gap: 0.75rem;
     }
 
+    /* FAQ Section — stack illustration below questions */
+    .faq-layout {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .faq-illustration {
+        flex: none;
+        width: 100%;
+        position: static;
+        top: auto;
+    }
+
+    /* Who Should Apply — hide side illustrations, stack layout */
+    .who-content {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .who-illustration-left,
+    .who-illustration-right {
+        flex: none;
+        width: 100%;
+        max-width: 250px;
+        margin: 0 auto;
+    }
+
+    /* About Key Facts — stack vertically */
+    .about-key-facts {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .key-fact {
+        width: 100%;
+    }
+
+    /* Footer logos */
+    .footer-tools-logos,
+    .footer-partners-logos {
+        gap: 1rem;
+    }
+
+    .footer-tool-logo,
+    .footer-partner-logo {
+        height: 24px;
+    }
+
+    /* Organisers — stack cards */
+    .organisers-grid {
+        grid-template-columns: 1fr;
+        max-width: 350px;
+        margin: 0 auto;
+    }
 }
 
 @media (max-width: 480px) {
     .hero-title {
+        font-size: clamp(2.5rem, 8vw, 6rem);
         letter-spacing: 0.04em;
+    }
+
+    .highlights-grid,
+    .topics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .programme-ridgeline {
+        width: 100%;
+    }
+
+    .about-illustration {
+        width: 85%;
+        max-width: 250px;
+    }
+
+    .faq-illustration {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .who-illustration-left,
+    .who-illustration-right {
+        max-width: 200px;
     }
 }
 
