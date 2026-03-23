@@ -1244,29 +1244,29 @@ a { text-decoration: none; color: inherit; }
 
     /* FAQ Section — stack illustration below questions */
     .faq-layout {
-        flex-direction: column;
+        flex-direction: column !important;
         gap: 1.5rem;
     }
 
     .faq-illustration {
-        flex: none;
-        width: 100%;
-        position: static;
-        top: auto;
+        flex: 0 0 auto !important;
+        width: 100% !important;
+        max-width: 400px;
+        margin: 0 auto;
+        position: static !important;
+        top: auto !important;
+        order: -1;
     }
 
-    /* Who Should Apply — hide side illustrations, stack layout */
+    /* Who Should Apply — hide side illustrations on mobile */
     .who-content {
-        flex-direction: column;
+        flex-direction: column !important;
         gap: 1.5rem;
     }
 
     .who-illustration-left,
     .who-illustration-right {
-        flex: none;
-        width: 100%;
-        max-width: 250px;
-        margin: 0 auto;
+        display: none !important;
     }
 
     /* About Key Facts — stack vertically */
