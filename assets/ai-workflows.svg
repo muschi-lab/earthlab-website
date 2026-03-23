@@ -1,0 +1,30 @@
+<svg viewBox="0 0 250 170" xmlns="http://www.w3.org/2000/svg">
+  <rect width="250" height="170" fill="#2a5c52"/>
+  
+  <!-- Terminal window -->
+  <rect x="20" y="15" width="210" height="140" rx="6" fill="rgba(0,0,0,0.25)" stroke="rgba(255,255,255,0.15)" stroke-width="0.8"/>
+  
+  <!-- Title bar -->
+  <rect x="20" y="15" width="210" height="18" rx="6" fill="rgba(0,0,0,0.15)"/>
+  <rect x="20" y="27" width="210" height="6" fill="rgba(0,0,0,0.15)"/>
+  <circle cx="32" cy="24" r="3" fill="rgba(232,100,100,0.5)"/>
+  <circle cx="42" cy="24" r="3" fill="rgba(232,200,100,0.5)"/>
+  <circle cx="52" cy="24" r="3" fill="rgba(100,200,150,0.5)"/>
+  
+  <!-- Terminal lines -->
+  <text x="28" y="48" font-family="Space Mono, monospace" font-size="5.5" fill="rgba(91,191,173,0.7)">$ claude analyze data.csv</text>
+  
+  <text x="28" y="62" font-family="Space Mono, monospace" font-size="5" fill="rgba(255,255,255,0.35)">→ Loading dataset (1.2M rows)...</text>
+  <text x="28" y="73" font-family="Space Mono, monospace" font-size="5" fill="rgba(255,255,255,0.35)">→ Fitting Bayesian GP model...</text>
+  <text x="28" y="84" font-family="Space Mono, monospace" font-size="5" fill="rgba(255,255,255,0.35)">→ Cross-validation: R²=0.94</text>
+  
+  <text x="28" y="98" font-family="Space Mono, monospace" font-size="5.5" fill="rgba(91,191,173,0.7)">$ claude plot results</text>
+  
+  <text x="28" y="112" font-family="Space Mono, monospace" font-size="5" fill="rgba(255,255,255,0.35)">→ Generating spatial maps...</text>
+  <text x="28" y="123" font-family="Space Mono, monospace" font-size="5" fill="rgba(232,220,200,0.5)">✓ Saved: fig_trends.png</text>
+  <text x="28" y="134" font-family="Space Mono, monospace" font-size="5" fill="rgba(232,220,200,0.5)">✓ Saved: fig_posterior.png</text>
+  
+  <!-- Cursor blink -->
+  <text x="28" y="148" font-family="Space Mono, monospace" font-size="5.5" fill="rgba(91,191,173,0.7)">$</text>
+  <rect x="36" y="142" width="5" height="7" fill="rgba(91,191,173,0.4)"/>
+</svg>

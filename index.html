@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EARTHLAB — Earth Data Analytics Research Network</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+<a href="#about" class="skip-link">Skip to content</a>
+
+<!-- Navigation -->
+<nav id="navbar">
+    <div class="nav-container">
+        <a href="#hero" class="nav-logo"><img src="assets/earthlab-logo.svg" alt="EARTHLAB" class="nav-logo-img"></a>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#programme">Programme</a></li>
+            <li><a href="#topics">Topics</a></li>
+            <li><a href="#who">Who Should Apply</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#apply" class="nav-cta">Apply Now</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<header id="hero">
+    <div class="hero-overlay"></div>
+
+
+
+    <div class="hero-layout">
+        <div class="hero-content">
+            <p class="hero-tag">Department of Geography, University of Cambridge &middot; June 8–12, 2026</p>
+            <h1 class="hero-title">EARTH<span class="accent">LAB</span></h1>
+            <p class="hero-subtitle">Earth Data Analytics Research Network</p>
+            <p class="hero-desc">An intensive programme for early-career climate scientists exploring Bayesian methods, machine learning &amp; AI-powered research. Supported by the Department of Geography and geared towards researchers with prior coding experience who want to bring their research to the next level.</p>
+
+            <!-- Application Deadline -->
+            <div class="deadline-notice">
+                <span class="deadline-label">Application deadline:</span>
+                <span class="deadline-date">24 April 2026</span>
+            </div>
+
+            <div class="hero-buttons">
+                <a href="#apply" class="btn btn-primary">Apply Now</a>
+                <a href="#about" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+
+        <!-- Three.js Globe -->
+        <div id="globe-canvas"></div>
+    </div>
+
+    <div class="scroll-indicator">
+        <span>Scroll</span>
+        <div class="scroll-arrow"></div>
+    </div>
+</header>
+
+
+<!-- About Section -->
+<section id="about" class="section">
+    <div class="container">
+        <h2 class="section-title">About the Programme</h2>
+        <div class="about-layout">
+            <div class="about-illustration">
+                <img src="assets/workflow-illustration.png" alt="Climate data analytics workflow" loading="lazy">
+            </div>
+            <div class="about-text">
+                <p><strong>EARTHLAB</strong> brings together early-career geoscientists at Cambridge for a week of intensive, hands-on training in modern data science methods. Over a 5-day period, participants will learn cutting-edge quantitative methods and apply them directly to their own research through collaborative hackathons, peer-led problem-solving, and specialist lectures.</p>
+                <p>The goal is to cultivate a lasting community within the Cambridge ecosystem that fosters interdepartmental collaboration, shares analytical capacity, and produces tangible tools, datasets, and publications.</p>
+            </div>
+        </div>
+        <div class="about-key-facts">
+            <div class="key-fact">
+                <span class="key-fact-value">12</span>
+                <span class="key-fact-label">Participants</span>
+            </div>
+            <div class="key-fact">
+                <span class="key-fact-value">5</span>
+                <span class="key-fact-label">Days</span>
+            </div>
+            <div class="key-fact">
+                <span class="key-fact-value">Free</span>
+                <span class="key-fact-label">To attend</span>
+            </div>
+            <div class="key-fact">
+                <span class="key-fact-value">AI</span>
+                <span class="key-fact-label">Claude Pro included</span>
+            </div>
+        </div>
+        <div class="highlights-grid">
+            <div class="highlight-card">
+                <div class="highlight-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                </div>
+                <h3>Interdisciplinary</h3>
+                <p>Bringing together researchers from climate science, palaeoclimatology, environmental science, and beyond</p>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <h3>Collaborative</h3>
+                <p>Work in teams towards common research goals, building a network that extends far beyond the programme</p>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="14" y1="4" x2="10" y2="20"/></svg>
+                </div>
+                <h3>Hands-On</h3>
+                <p>Interactive lectures, live coding sessions, and real-world data challenges using your own research data</p>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                </div>
+                <h3>Future-Facing</h3>
+                <p>Learn to integrate AI coding assistants into your research pipeline — from data cleaning to analysis and visualisation</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Programme Section -->
+<section id="programme" class="section section-dark">
+    <div class="container">
+        <h2 class="section-title light">Programme Structure</h2>
+        <p class="section-intro light">An intensive one-week programme running 8–12 June 2026, mixing lectures with hands-on collaborative work.</p>
+
+        <div class="programme-legend">
+            <span class="legend-item"><span class="legend-dot legend-welcome"></span> Welcome &amp; Presentations</span>
+            <span class="legend-item"><span class="legend-dot legend-lecture"></span> Lecture</span>
+            <span class="legend-item"><span class="legend-dot legend-hack"></span> Hackathon</span>
+            <span class="legend-item"><span class="legend-dot legend-final"></span> Final Presentations</span>
+        </div>
+
+        <div class="programme-layout">
+
+        <!-- Ridgeline density plot (right side) -->
+        <div class="programme-ridgeline">
+            <svg viewBox="-5 -5 220 540" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <!-- Horizontal baseline for each year, with shifting density peaks -->
+                <!-- 1940s-1960s: peaks shifted left (cold, blue) -->
+                <g opacity="0.9">
+                    <!-- 1940 --><path d="M20,28 L50,28 Q65,26 75,15 Q85,5 90,10 Q95,20 100,25 Q105,28 200,28" stroke="rgba(80,160,220,0.6)" stroke-width="0.8" fill="rgba(40,100,180,0.15)"/>
+                    <!-- 1945 --><path d="M20,48 L48,48 Q60,46 72,34 Q80,25 86,30 Q94,42 102,46 Q108,48 200,48" stroke="rgba(80,160,220,0.55)" stroke-width="0.8" fill="rgba(50,110,190,0.13)"/>
+                    <!-- 1950 --><path d="M20,68 L52,68 Q66,66 76,54 Q84,44 90,48 Q96,58 104,64 Q110,68 200,68" stroke="rgba(90,170,225,0.55)" stroke-width="0.8" fill="rgba(60,120,195,0.12)"/>
+                    <!-- 1955 --><path d="M20,88 L50,88 Q64,86 74,74 Q82,64 88,68 Q94,78 102,84 Q110,88 200,88" stroke="rgba(100,175,225,0.5)" stroke-width="0.8" fill="rgba(70,130,200,0.11)"/>
+                    <!-- 1960 --><path d="M20,108 L54,108 Q68,106 78,94 Q86,82 92,88 Q98,98 106,104 Q114,108 200,108" stroke="rgba(110,180,225,0.5)" stroke-width="0.8" fill="rgba(80,140,205,0.1)"/>
+                    <!-- 1965 --><path d="M20,128 L52,128 Q66,126 76,114 Q84,102 90,108 Q96,118 104,124 Q112,128 200,128" stroke="rgba(120,185,225,0.5)" stroke-width="0.8" fill="rgba(90,150,210,0.1)"/>
+                    <!-- 1970 --><path d="M20,148 L56,148 Q72,146 82,132 Q90,120 96,126 Q102,138 110,144 Q118,148 200,148" stroke="rgba(130,190,225,0.45)" stroke-width="0.8" fill="rgba(100,155,210,0.09)"/>
+                    <!-- 1975 --><path d="M20,168 L58,168 Q74,166 86,152 Q94,138 100,144 Q106,156 114,164 Q122,168 200,168" stroke="rgba(140,195,220,0.45)" stroke-width="0.8" fill="rgba(110,160,210,0.08)"/>
+                    <!-- 1980 --><path d="M20,188 L62,188 Q78,186 90,172 Q98,156 104,162 Q110,176 118,184 Q126,188 200,188" stroke="rgba(150,195,215,0.45)" stroke-width="0.8" fill="rgba(130,170,210,0.08)"/>
+                    <!-- 1985 --><path d="M20,208 L66,208 Q82,206 94,190 Q102,172 108,180 Q114,194 122,204 Q130,208 200,208" stroke="rgba(160,195,210,0.4)" stroke-width="0.8" fill="rgba(140,175,205,0.07)"/>
+
+                    <!-- Transition zone: 1990s (shifting right, blue to pink) -->
+                    <!-- 1990 --><path d="M20,228 L72,228 Q88,226 100,210 Q108,192 114,200 Q120,214 128,224 Q136,228 200,228" stroke="rgba(180,170,190,0.4)" stroke-width="0.8" fill="rgba(160,150,170,0.07)"/>
+                    <!-- 1995 --><path d="M20,248 L78,248 Q94,246 106,228 Q114,208 120,218 Q126,234 134,244 Q142,248 200,248" stroke="rgba(190,160,170,0.4)" stroke-width="0.8" fill="rgba(180,140,150,0.07)"/>
+
+                    <!-- 2000s-2020s: peaks shifted right (warm, red) -->
+                    <!-- 2000 --><path d="M20,268 L84,268 Q100,266 112,248 Q120,228 126,238 Q132,254 140,264 Q148,268 200,268" stroke="rgba(200,140,140,0.45)" stroke-width="0.8" fill="rgba(200,120,120,0.08)"/>
+                    <!-- 2005 --><path d="M20,288 L90,288 Q106,286 118,266 Q126,244 132,256 Q138,272 146,284 Q154,288 200,288" stroke="rgba(210,130,120,0.45)" stroke-width="0.8" fill="rgba(210,110,100,0.09)"/>
+                    <!-- 2010 --><path d="M20,308 L96,308 Q112,306 124,284 Q132,260 138,274 Q144,292 152,304 Q158,308 200,308" stroke="rgba(215,115,100,0.5)" stroke-width="0.8" fill="rgba(215,95,80,0.1)"/>
+                    <!-- 2015 --><path d="M20,328 L102,328 Q118,326 130,302 Q138,276 144,292 Q150,312 158,324 Q164,328 200,328" stroke="rgba(220,100,85,0.5)" stroke-width="0.9" fill="rgba(220,80,65,0.12)"/>
+                    <!-- 2020 --><path d="M20,348 L108,348 Q124,346 136,318 Q144,288 150,306 Q156,330 164,344 Q170,348 200,348" stroke="rgba(225,80,65,0.55)" stroke-width="1" fill="rgba(225,60,50,0.14)"/>
+                    <!-- 2024 --><path d="M20,368 L114,368 Q132,366 144,332 Q152,296 158,318 Q164,346 170,364 Q174,368 200,368" stroke="rgba(200,40,40,0.6)" stroke-width="1.2" fill="rgba(200,30,30,0.18)"/>
+                    <!-- 2030 --><path d="M20,388 L118,388 Q136,386 148,350 Q156,310 162,332 Q168,360 174,384 Q178,388 200,388" stroke="rgba(190,30,30,0.55)" stroke-width="1.1" fill="rgba(190,25,25,0.16)"/>
+                    <!-- 2040 --><path d="M20,408 L122,408 Q140,406 152,368 Q160,324 166,348 Q172,378 178,404 Q182,408 200,408" stroke="rgba(180,25,25,0.5)" stroke-width="1" fill="rgba(180,20,20,0.14)"/>
+                    <!-- 2050 --><path d="M20,428 L126,428 Q144,426 156,386 Q164,340 170,364 Q176,396 182,424 Q186,428 200,428" stroke="rgba(170,20,20,0.45)" stroke-width="0.9" fill="rgba(170,15,15,0.12)"/>
+                    <!-- 2060 --><path d="M20,448 L130,448 Q148,446 160,404 Q168,356 174,380 Q180,414 186,444 Q190,448 200,448" stroke="rgba(160,15,15,0.4)" stroke-width="0.8" fill="rgba(160,10,10,0.1)"/>
+                    <!-- 2070 --><path d="M20,468 L134,468 Q152,466 164,420 Q172,370 178,396 Q184,432 190,464 Q193,468 200,468" stroke="rgba(150,10,10,0.35)" stroke-width="0.8" fill="rgba(150,8,8,0.08)"/>
+                    <!-- 2080 --><path d="M20,488 L138,488 Q156,486 168,436 Q176,382 182,410 Q188,450 194,484 Q196,488 200,488" stroke="rgba(140,8,8,0.3)" stroke-width="0.7" fill="rgba(140,5,5,0.06)"/>
+                </g>
+
+                <!-- Horizontal grid lines -->
+                <g stroke="rgba(255,255,255,0.05)" stroke-width="0.5">
+                    <line x1="20" y1="28" x2="200" y2="28"/>
+                    <line x1="20" y1="68" x2="200" y2="68"/>
+                    <line x1="20" y1="108" x2="200" y2="108"/>
+                    <line x1="20" y1="148" x2="200" y2="148"/>
+                    <line x1="20" y1="188" x2="200" y2="188"/>
+                    <line x1="20" y1="228" x2="200" y2="228"/>
+                    <line x1="20" y1="268" x2="200" y2="268"/>
+                    <line x1="20" y1="308" x2="200" y2="308"/>
+                    <line x1="20" y1="348" x2="200" y2="348"/>
+                    <line x1="20" y1="388" x2="200" y2="388"/>
+                    <line x1="20" y1="428" x2="200" y2="428"/>
+                    <line x1="20" y1="448" x2="200" y2="448"/>
+                    <line x1="20" y1="468" x2="200" y2="468"/>
+                    <line x1="20" y1="488" x2="200" y2="488"/>
+                </g>
+
+                <!-- Year labels -->
+                <text x="4" y="32" font-family="'Space Mono', monospace" font-size="7" fill="rgba(255,255,255,0.45)">1940</text>
+                <text x="4" y="112" font-family="'Space Mono', monospace" font-size="7" fill="rgba(255,255,255,0.45)">1960</text>
+                <text x="4" y="192" font-family="'Space Mono', monospace" font-size="7" fill="rgba(255,255,255,0.45)">1980</text>
+                <text x="4" y="272" font-family="'Space Mono', monospace" font-size="7" fill="rgba(255,255,255,0.45)">2000</text>
+                <text x="4" y="352" font-family="'Space Mono', monospace" font-size="7" fill="rgba(255,255,255,0.45)">2020</text>
+                <text x="4" y="432" font-family="'Space Mono', monospace" font-size="7" fill="rgba(255,255,255,0.45)">2040</text>
+                <text x="4" y="492" font-family="'Space Mono', monospace" font-size="7" fill="rgba(255,255,255,0.45)">2060</text>
+
+                <!-- Temperature axis labels -->
+                <text x="45" y="510" font-family="'Space Mono', monospace" font-size="6" fill="rgba(255,255,255,0.4)">-1°C</text>
+                <text x="100" y="510" font-family="'Space Mono', monospace" font-size="6" fill="rgba(255,255,255,0.4)">0°C</text>
+                <text x="155" y="510" font-family="'Space Mono', monospace" font-size="6" fill="rgba(255,255,255,0.4)">+1°C</text>
+                <!-- X-axis title -->
+                <text x="100" y="525" font-family="'Space Mono', monospace" font-size="5.5" fill="rgba(255,255,255,0.35)" text-anchor="middle">Temperature anomaly</text>
+            </svg>
+        </div>
+
+        <div class="timeline">
+            <div class="timeline-item" data-type="welcome">
+                <div class="timeline-marker">
+                    <span class="timeline-day">Day 1 – AM</span>
+                </div>
+                <div class="timeline-content">
+                    <h3>Welcome, Research Pitches &amp; Team Formation</h3>
+                    <p>Introduction to EARTHLAB, participant presentations of research interests, and team formation around shared goals and complementary skills.</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-type="lecture">
+                <div class="timeline-marker">
+                    <span class="timeline-day">Day 1 – PM</span>
+                </div>
+                <div class="timeline-content">
+                    <h3>Lecture: AI Pipelines for Research</h3>
+                    <p>Hands-on introduction to AI coding assistants and automated workflows for research&mdash;setting up collaborative tools and pipelines that teams will use throughout the programme.</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-type="lecture">
+                <div class="timeline-marker">
+                    <span class="timeline-day">Day 2 – AM</span>
+                </div>
+                <div class="timeline-content">
+                    <h3>Lecture: Bayesian Modelling</h3>
+                    <p>Interactive lecture on Bayesian methods for geoscientific data. Hands-on practical applying probabilistic frameworks to real climate datasets.</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-type="hack">
+                <div class="timeline-marker">
+                    <span class="timeline-day">Day 2 – PM</span>
+                </div>
+                <div class="timeline-content">
+                    <h3>Collaborative Hackathon I</h3>
+                    <p>Team-based work applying Bayesian approaches to participant projects. Peer support and problem-solving.</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-type="lecture">
+                <div class="timeline-marker">
+                    <span class="timeline-day">Day 3 – AM</span>
+                </div>
+                <div class="timeline-content">
+                    <h3>Lecture: Machine Learning for Climate Data</h3>
+                    <p>ML techniques tailored to climate and environmental applications. From dimensionality reduction to neural networks for spatiotemporal data.</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-type="hack">
+                <div class="timeline-marker">
+                    <span class="timeline-day">Day 3 – PM</span>
+                </div>
+                <div class="timeline-content">
+                    <h3>Collaborative Hackathon II</h3>
+                    <p>Teams continue building on their projects, integrating ML methods. Mid-programme check-in and progress sharing.</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-type="hack">
+                <div class="timeline-marker">
+                    <span class="timeline-day">Day 4 – AM</span>
+                </div>
+                <div class="timeline-content">
+                    <h3>Collaborative Hackathon III</h3>
+                    <p>Full-day deep work on team projects, combining all methods learned.</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-type="hack">
+                <div class="timeline-marker">
+                    <span class="timeline-day">Day 4 – PM</span>
+                </div>
+                <div class="timeline-content">
+                    <h3>Collaborative Hackathon III (cont.)</h3>
+                    <p>Continued project development with mentor support and peer feedback.</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-type="hack">
+                <div class="timeline-marker">
+                    <span class="timeline-day">Day 5 – AM</span>
+                </div>
+                <div class="timeline-content">
+                    <h3>Final Hackathon &amp; Polish</h3>
+                    <p>Last sprint to refine projects, prepare visualisations, and work towards publishable results.</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-type="final">
+                <div class="timeline-marker">
+                    <span class="timeline-day">Day 5 – PM</span>
+                </div>
+                <div class="timeline-content">
+                    <h3>Presentations &amp; Next Steps</h3>
+                    <p>Teams present their work, discuss pathways to publication and grant applications, and plan ongoing collaborations.</p>
+                </div>
+            </div>
+        </div>
+        </div><!-- /programme-layout -->
+    </div>
+</section>
+
+<!-- Topics Section -->
+<section id="topics" class="section">
+    <div class="container">
+        <h2 class="section-title">What You'll Learn</h2>
+        <div class="topics-grid">
+            <div class="topic-card">
+                <div class="topic-illustration">
+                    <img src="assets/ai-workflows.svg?v=2" alt="AI-powered terminal" loading="lazy">
+                </div>
+                <h3>AI-Powered Workflows</h3>
+                <p>Using AI coding assistants to build research pipelines, automate data processing, and accelerate scientific discovery.</p>
+            </div>
+            <div class="topic-card">
+                <div class="topic-illustration">
+                    <img src="assets/bayesian-distributions.svg?v=2" alt="Bayesian distributions" loading="lazy">
+                </div>
+                <h3>Bayesian Modelling</h3>
+                <p>Probabilistic frameworks for uncertainty quantification, hierarchical models, and inference techniques applied to geoscientific data.</p>
+            </div>
+            <div class="topic-card">
+                <div class="topic-illustration">
+                    <img src="assets/cnn-architecture.svg?v=2" alt="CNN architecture" loading="lazy">
+                </div>
+                <h3>Machine Learning</h3>
+                <p>Supervised and unsupervised methods for climate data&mdash;from random forests and gradient boosting to deep learning for spatiotemporal patterns.</p>
+            </div>
+            <div class="topic-card">
+                <div class="topic-illustration">
+                    <img src="assets/cmip6-timeseries-dark.svg?v=2" alt="Climate timeseries" loading="lazy">
+                </div>
+                <h3>Climate Data Analysis</h3>
+                <p>Timeseries analysis, spatial statistics, multi-model ensemble techniques, and working with large-scale observational and reanalysis datasets.</p>
+            </div>
+        </div>
+        <div class="warming-globes">
+            <img src="assets/warming_globes.png" alt="Global warming projections from CESM2 showing temperature anomalies at 1900, 1950, 2010, and 2060" loading="lazy">
+        </div>
+    </div>
+</section>
+
+<!-- Who Should Apply -->
+<section id="who" class="section section-alt">
+    <div class="container">
+        <h2 class="section-title">Who Should Apply</h2>
+        <div class="who-content">
+            <div class="who-illustration-left">
+                <img src="assets/brain-circuit.png" alt="Brain and circuit illustration representing ML and AI" loading="lazy">
+            </div>
+            <div class="who-text">
+                <p>EARTHLAB is primarily designed for <strong>PhD students and early-career researchers</strong> (including postdocs and research staff) working on climate, environmental, and/or palaeoclimatological problems at the University of Cambridge.</p>
+                <p>Applications from <strong>MPhil and Part III students</strong> with a well-defined research project in climate, environmental, or palaeoclimate science are welcome and will be considered subject to availability.</p>
+                <p>We welcome applicants from across the University&mdash;Geography, Earth Sciences, Engineering, Plant Sciences, and any other department working on Earth, climate, and environmental data.</p>
+                <p>This is an <strong>intensive data science programme</strong>. While no prior experience with Bayesian statistics, machine learning, or AI tools is required, we expect participants to have strong computing skills and a genuine interest in tackling quantitative climate and environmental problems. The programme is <strong>free of charge</strong>, fully funded by the Department of Geography's SRI fund.</p>
+                <div class="perk-highlight">
+                    <p><strong>Accepted participants will receive a complimentary 3-month Claude Pro subscription</strong> to continue building AI-powered research workflows beyond the programme.</p>
+                </div>
+            </div>
+            <div class="who-illustration-right">
+                <img src="assets/ai-circuit.png" alt="AI circuit board illustration" loading="lazy">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section id="faq" class="section">
+    <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-layout">
+            <div class="faq-list">
+            <details class="faq-item">
+                <summary class="faq-question">Do I need prior experience with Bayesian statistics or machine learning?</summary>
+                <div class="faq-answer">
+                    <p>No. EARTHLAB is designed to be accessible to researchers at all levels of quantitative experience. The interactive lectures will introduce concepts from the ground up, and the collaborative format means you'll learn alongside peers with complementary skills.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-question">What should I bring?</summary>
+                <div class="faq-answer">
+                    <p>Bring your laptop, your own research data or a specific problem you'd like to tackle, and an open mind. We'll provide a 3-month Claude Pro subscription and all the collaborative infrastructure you need.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-question">Is there a cost to participate?</summary>
+                <div class="faq-answer">
+                    <p>No. EARTHLAB is fully funded by the Department of Geography's SRI fund, with additional support from the Centre for Climate Repair and the Cambridge Centre for Climate Science. Participation and AI tools are all provided at no cost.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-question">What happens after EARTHLAB?</summary>
+                <div class="faq-answer">
+                    <p>EARTHLAB is designed to build a lasting network. We aim to support ongoing collaborations, co-authored publications, and follow-on grant applications. The teaching materials developed will also be assessed for integration into Geography's Part II and MPhil programmes.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-question">What will I leave with?</summary>
+                <div class="faq-answer">
+                    <p>Participants leave EARTHLAB with new analytical skills in Bayesian modelling and machine learning, reusable code and workflows they can apply immediately to their research, a network of collaborators across Cambridge departments, and a 3-month Claude Pro subscription to continue building AI-powered research pipelines.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-question">How are teams formed?</summary>
+                <div class="faq-answer">
+                    <p>On Day 1, participants will pitch their research projects and interests. Teams will form organically around shared goals and complementary skills, with guidance from the organisers to ensure productive collaborations.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-question">How many places are available?</summary>
+                <div class="faq-answer">
+                    <p>We expect to welcome 12 participants for this inaugural edition of EARTHLAB.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-question">What programming language will be used?</summary>
+                <div class="faq-answer">
+                    <p>All sessions use Python in Jupyter notebooks. We will also introduce AI coding assistants to accelerate your workflow. No advanced Python experience is required — we will cover the essentials.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-question">Do I need to attend all 5 days?</summary>
+                <div class="faq-answer">
+                    <p>We strongly encourage full attendance as the programme is designed as a cohesive experience, with each day building on the previous. However, if you have unavoidable commitments, please mention this in your application.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-question">Where does it take place?</summary>
+                <div class="faq-answer">
+                    <p>EARTHLAB is hosted by the Department of Geography at the University of Cambridge. The exact venue and room details will be confirmed closer to the date.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-question">Can I apply if I'm not based at Cambridge?</summary>
+                <div class="faq-answer">
+                    <p>EARTHLAB is primarily aimed at researchers within the University of Cambridge, including affiliated institutions such as the British Antarctic Survey and the MRC units. If you are from outside Cambridge but have a strong case for participation, we encourage you to apply.</p>
+                </div>
+            </details>
+            </div>
+            <div class="faq-illustration">
+                <img src="assets/emergent-constraint.png" alt="Emergent constraint schematic" class="faq-figure" loading="lazy">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Organisers Section -->
+<section id="organisers" class="section section-alt">
+    <div class="container">
+        <h2 class="section-title">Organisers</h2>
+        <div class="organisers-grid">
+            <div class="organiser-card">
+                <a href="https://www.geog.cam.ac.uk/people/muschitiello/" target="_blank" rel="noopener">
+                    <img src="assets/francesco-muschitiello_2.jpg?v=2" alt="Dr Francesco Muschitiello" class="organiser-photo" loading="lazy">
+                </a>
+                <h3>Dr Francesco Muschitiello</h3>
+                <p class="organiser-title">Associate Professor in Physical Geography</p>
+                <p class="organiser-dept">Department of Geography, University of Cambridge</p>
+                <p class="organiser-bio">Palaeoclimatologist specialising in rapid climate transitions, proxy data from marine sediments and ice cores, and quantitative methods for Earth system science.</p>
+                <a href="https://www.geog.cam.ac.uk/people/muschitiello/" target="_blank" rel="noopener" class="organiser-link">Profile</a>
+            </div>
+            <div class="organiser-card">
+                <a href="https://www.eng.cam.ac.uk/profiles/ac685" target="_blank" rel="noopener">
+                    <img src="assets/alice-cicirello.jpg" alt="Dr Alice Cicirello" class="organiser-photo" loading="lazy">
+                </a>
+                <h3>Dr Alice Cicirello</h3>
+                <p class="organiser-title">University Assistant Professor in Applied Mechanics</p>
+                <p class="organiser-dept">Department of Engineering, University of Cambridge</p>
+                <p class="organiser-bio">Expert in uncertainty quantification, physics-enhanced machine learning, and data-driven methods for engineering applications. Founder of the Data, Vibration and Uncertainty research group.</p>
+                <a href="https://www.eng.cam.ac.uk/profiles/ac685" target="_blank" rel="noopener" class="organiser-link">Profile</a>
+            </div>
+        </div>
+
+        <div class="supporters">
+            <h3>Supported By</h3>
+            <div class="supporter-logos">
+                <a href="https://www.geog.cam.ac.uk/" target="_blank" rel="noopener" class="supporter">
+                    <img src="assets/cambridge-crest.png" alt="University of Cambridge" class="supporter-img" loading="lazy">
+                </a>
+                <a href="https://www.climaterepair.cam.ac.uk/" target="_blank" rel="noopener" class="supporter">
+                    <img src="assets/ccr-logo.png" alt="Centre for Climate Repair" class="supporter-img" loading="lazy">
+                </a>
+                <a href="https://www.climatescience.cam.ac.uk/" target="_blank" rel="noopener" class="supporter">
+                    <img src="assets/ccfcs-logo-clean.png" alt="Cambridge Centre for Climate Science" class="supporter-img" loading="lazy">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Apply Section -->
+<section id="apply" class="section section-apply">
+    <div class="apply-contour-bg">
+        <img src="assets/contour-bg.svg" alt="" aria-hidden="true" loading="lazy">
+    </div>
+    <div class="container">
+        <h2 class="section-title">Apply</h2>
+
+        <div class="apply-content">
+            <p>Applications are now open. To apply, please fill in the form below with:</p>
+            <ol class="apply-list">
+                <li>A brief description of your current research</li>
+                <li>What you hope to achieve by joining EARTHLAB</li>
+                <li>What datasets or research questions you plan to bring</li>
+            </ol>
+            <a href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=RQSlSfq9eUut41R7TzmG6b4ouvddIHlKmSiwJCSf8SVUNkdVWkZDMzNaQ0Y4WDZRS1NKVUlJTk0xVC4u" target="_blank" rel="noopener" class="btn btn-primary btn-large" id="apply-btn">Open Application Form</a>
+            <p class="apply-note">Applications will be reviewed on a rolling basis.<br>For questions, contact <a href="mailto:fm476@cam.ac.uk">fm476@cam.ac.uk</a>.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="footer-name">EARTHLAB</span>
+                <span class="footer-subtitle">Earth Data Analytics Research Network</span>
+            </div>
+            <div class="footer-links">
+                <a href="https://www.geog.cam.ac.uk/" target="_blank" rel="noopener">Department of Geography</a>
+                <a href="https://www.climaterepair.cam.ac.uk/" target="_blank" rel="noopener">Centre for Climate Repair</a>
+                <a href="https://www.climatescience.cam.ac.uk/" target="_blank" rel="noopener">CCfCS</a>
+                <a href="mailto:fm476@cam.ac.uk">fm476@cam.ac.uk</a>
+            </div>
+            <div class="footer-copy">University of Cambridge &middot; 2026</div>
+        </div>
+    </div>
+
+    <div class="footer-tools-logos">
+        <span>Powered by</span>
+        <img src="assets/python-logo.svg" alt="Python" class="footer-tool-logo">
+        <img src="assets/sklearn-logo.png" alt="scikit-learn" class="footer-tool-logo">
+        <img src="assets/jupyter-logo.svg" alt="Jupyter" class="footer-tool-logo">
+        <img src="assets/anthropic-logo.svg" alt="Anthropic" class="footer-tool-logo">
+        <img src="assets/github-logo.svg" alt="GitHub" class="footer-tool-logo">
+    </div>
+
+    <div class="footer-partners-logos">
+            <span>Supported by</span>
+            <a href="https://www.geog.cam.ac.uk/" target="_blank" rel="noopener">
+                <img src="assets/cambridge-crest-dark.png?v=5" alt="University of Cambridge" class="footer-partner-logo">
+            </a>
+            <a href="https://www.climaterepair.cam.ac.uk/" target="_blank" rel="noopener">
+                <img src="assets/ccr-logo.png" alt="Centre for Climate Repair" class="footer-partner-logo">
+            </a>
+            <a href="https://www.climatescience.cam.ac.uk/" target="_blank" rel="noopener">
+                <img src="assets/ccfcs-logo.png" alt="Cambridge Centre for Climate Science" class="footer-partner-logo">
+            </a>
+        </div>
+        <p class="footer-hosted">Hosted on <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a></p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
